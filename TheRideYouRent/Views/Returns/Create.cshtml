@@ -1,0 +1,43 @@
+﻿@model TheRideYouRent.Models.Return
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Return</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="rentalId" class="control-label"></label>
+                <input asp-for="rentalId" class="form-control" />
+                <span asp-validation-for="rentalId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="returnDate" class="control-label"></label>
+                <input asp-for="returnDate" class="form-control" />
+                <span asp-validation-for="returnDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="fine" class="control-label"></label>
+                <input asp-for="fine" class="form-control" />
+                <span asp-validation-for="fine" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

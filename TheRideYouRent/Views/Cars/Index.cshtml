@@ -1,0 +1,65 @@
+﻿@model IEnumerable<TheRideYouRent.Models.Car>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.make)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.model)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.bodyType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.kilometersTravelled)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.serviceKilometers)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.available)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.make)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.model)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.bodyType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.kilometersTravelled)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.serviceKilometers)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.available)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.carId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.carId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.carId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
