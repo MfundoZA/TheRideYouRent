@@ -1,4 +1,4 @@
-# The Ride You Rent
+# TheRideYouRent
 
 ASP.NET (C#) web app for employees of TheRideYouRent to use to mange their records of cars, drivers, returns etc.
 
