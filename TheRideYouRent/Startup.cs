@@ -62,7 +62,8 @@ namespace TheRideYouRent
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
+                    pattern: "{controller=Home}/{action=Index}/{id?}")
+                    RequireAuthorization();
                 endpoints.MapRazorPages();
             });
         }

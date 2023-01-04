@@ -28,6 +28,7 @@ namespace TheRideYouRent.Controllers
 
         }
 
+        [AllowAnonymous]
         public IActionResult Index()
         {
             return View();
@@ -54,6 +55,7 @@ namespace TheRideYouRent.Controllers
             return View();
         }
 
+        [AllowAnonymous]
         public IActionResult Privacy()
         {
             return View();
