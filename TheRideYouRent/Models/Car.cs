@@ -16,13 +16,16 @@ namespace TheRideYouRent.Models
         public string make { get; set; }
 
         public string model { get; set; }
-
+        
+        Display(Name = "Body Type")
         [Column("body_type")]
         public string bodyType { get; set; }
 
+        Display(Name = "Kilometers Travelled")
         [Column("kilometers_travelled")]
         public int kilometersTravelled { get; set; }
 
+        Display(Name = "Service Kilometers")
         [Column("service_kilometers")]
         public int serviceKilometers { get; set; }
 
