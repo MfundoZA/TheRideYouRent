@@ -10,6 +10,7 @@ namespace TheRideYouRent.Models
     public class Car
     {
         [Key]
+        Display(Name = "Car Id")
         [Column("car_id")]
         public int carId { get; set; }
 
