@@ -12,16 +12,16 @@ namespace TheRideYouRent.Models
         [Key]
         [Display(Name = "Driver Id")]
         [Column("driver_id")]
-        public int driverId { get; set; }
+        public int DriverId { get; set; }
 
-        public string name { get; set; }
+        public string Name { get; set; }
 
-        public string address { get; set; }
+        public string Address { get; set; }
 
-        public string email { get; set; }
+        public string Email { get; set; }
 
         [Display(Name = "Cell Number")]
         [Column("cell_number")]
-        public string cellNumber { get; set; }
+        public string CellNumber { get; set; }
     }
 }

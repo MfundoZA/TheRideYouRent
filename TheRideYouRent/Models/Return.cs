@@ -13,17 +13,17 @@ namespace TheRideYouRent.Models
         [Key]
         [Display(Name = "Return Id")]
         [Column("return_id")]
-        public int returnId { get; set; }
+        public int ReturnId { get; set; }
 
         [ForeignKey("rental_id")]
         [Display(Name = "Rental Id")]
         [Column("rental_id")]
-        public int rentalId { get; set; }
+        public int RentalId { get; set; }
 
         [Display(Name = "Return Date")]
         [Column("return_date")]
-        public DateTime returnDate { get; set; }
+        public DateTime ReturnDate { get; set; }
 
-        public int fine { get; set; }
+        public int Fine { get; set; }
     }
 }

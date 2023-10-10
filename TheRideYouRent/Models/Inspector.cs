@@ -13,14 +13,14 @@ namespace TheRideYouRent.Models
         [Key]
         [Display(Name = "Inspector Id")]
         [Column("inspector_id")]
-        public int inspectorId { get; set; }
+        public int InspectorId { get; set; }
 
-        public string name { get; set; }
+        public string Name { get; set; }
 
-        public string email { get; set; }
+        public string Email { get; set; }
 
         [Display(Name = "Cell Number")]
         [Column("cell_number")]
-        public string cellNumber { get; set; }
+        public string CellNumber { get; set; }
     }
 }

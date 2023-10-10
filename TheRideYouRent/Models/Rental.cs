@@ -13,33 +13,33 @@ namespace TheRideYouRent.Models
         [Key]
         [Display(Name = "Rental Id")]
         [Column("rental_id")]
-        public int rentalId { get; set; }
+        public int RentalId { get; set; }
 
         [ForeignKey("driver_id")]
         [Display(Name = "Driver Id")]
         [Column("driver_id")]
-        public int driverId { get; set; }
+        public int DriverId { get; set; }
 
         [ForeignKey("inspector_id")]
         [Display(Name = "Inspector Id")]
         [Column("inspector_id")]
-        public int inspectorId { get; set; }
+        public int InspectorId { get; set; }
 
         [ForeignKey("car_id")]
         [Display(Name = "Car Id")]
         [Column("car_id")]
-        public int carId { get; set; }
+        public int CarId { get; set; }
 
         [Display(Name = "Rental Fee")]
         [Column("rental_fee")]
-        public int rentalFee { get; set; }
+        public int RentalFee { get; set; }
 
         [Display(Name = "Start Date")]
         [Column("start_date")]
-        public DateTime startDate { get; set; }
+        public DateTime StartDate { get; set; }
 
         [Display(Name = "End Date")]
         [Column("end_date")]
-        public DateTime endDate { get; set; }
+        public DateTime EndDate { get; set; }
     }
 }
