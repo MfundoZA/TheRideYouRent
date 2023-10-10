@@ -34,7 +34,7 @@ namespace TheRideYouRent.Controllers
             }
 
             var inspector = await _context.Inspector
-                .FirstOrDefaultAsync(m => m.inspectorId == id);
+                .FirstOrDefaultAsync(m => m.InspectorId == id);
             if (inspector == null)
             {
                 return NotFound();
@@ -88,7 +88,7 @@ namespace TheRideYouRent.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("inspectorId,name,email,cellNumber")] Inspector inspector)
         {
-            if (id != inspector.inspectorId)
+            if (id != inspector.InspectorId)
             {
                 return NotFound();
             }
@@ -102,7 +102,7 @@ namespace TheRideYouRent.Controllers
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!InspectorExists(inspector.inspectorId))
+                    if (!InspectorExists(inspector.InspectorId))
                     {
                         return NotFound();
                     }
@@ -125,7 +125,7 @@ namespace TheRideYouRent.Controllers
             }
 
             var inspector = await _context.Inspector
-                .FirstOrDefaultAsync(m => m.inspectorId == id);
+                .FirstOrDefaultAsync(m => m.InspectorId == id);
             if (inspector == null)
             {
                 return NotFound();
@@ -147,7 +147,7 @@ namespace TheRideYouRent.Controllers
 
         private bool InspectorExists(int id)
         {
-            return _context.Inspector.Any(e => e.inspectorId == id);
+            return _context.Inspector.Any(e => e.InspectorId == id);
         }
     }
 }

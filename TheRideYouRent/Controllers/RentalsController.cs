@@ -34,7 +34,7 @@ namespace TheRideYouRent.Controllers
             }
 
             var rental = await _context.Rental
-                .FirstOrDefaultAsync(m => m.rentalId == id);
+                .FirstOrDefaultAsync(m => m.RentalId == id);
             if (rental == null)
             {
                 return NotFound();
@@ -88,7 +88,7 @@ namespace TheRideYouRent.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("rentalId,driverId,inspectorId,carId,rentalFee,startDate,endDate")] Rental rental)
         {
-            if (id != rental.rentalId)
+            if (id != rental.RentalId)
             {
                 return NotFound();
             }
@@ -102,7 +102,7 @@ namespace TheRideYouRent.Controllers
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!RentalExists(rental.rentalId))
+                    if (!RentalExists(rental.RentalId))
                     {
                         return NotFound();
                     }
@@ -125,7 +125,7 @@ namespace TheRideYouRent.Controllers
             }
 
             var rental = await _context.Rental
-                .FirstOrDefaultAsync(m => m.rentalId == id);
+                .FirstOrDefaultAsync(m => m.RentalId == id);
             if (rental == null)
             {
                 return NotFound();
@@ -147,7 +147,7 @@ namespace TheRideYouRent.Controllers
 
         private bool RentalExists(int id)
         {
-            return _context.Rental.Any(e => e.rentalId == id);
+            return _context.Rental.Any(e => e.RentalId == id);
         }
     }
 }

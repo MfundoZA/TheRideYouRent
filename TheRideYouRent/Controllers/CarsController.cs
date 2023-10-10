@@ -34,7 +34,7 @@ namespace TheRideYouRent.Controllers
             }
 
             var car = await _context.Car
-                .FirstOrDefaultAsync(m => m.carId == id);
+                .FirstOrDefaultAsync(m => m.CarId == id);
             if (car == null)
             {
                 return NotFound();
@@ -88,7 +88,7 @@ namespace TheRideYouRent.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("carId,make,model,bodyType,kilometersTravelled,serviceKilometers,available")] Car car)
         {
-            if (id != car.carId)
+            if (id != car.CarId)
             {
                 return NotFound();
             }
@@ -102,7 +102,7 @@ namespace TheRideYouRent.Controllers
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!CarExists(car.carId))
+                    if (!CarExists(car.CarId))
                     {
                         return NotFound();
                     }
@@ -125,7 +125,7 @@ namespace TheRideYouRent.Controllers
             }
 
             var car = await _context.Car
-                .FirstOrDefaultAsync(m => m.carId == id);
+                .FirstOrDefaultAsync(m => m.CarId == id);
             if (car == null)
             {
                 return NotFound();
@@ -147,7 +147,7 @@ namespace TheRideYouRent.Controllers
 
         private bool CarExists(int id)
         {
-            return _context.Car.Any(e => e.carId == id);
+            return _context.Car.Any(e => e.CarId == id);
         }
     }
 }

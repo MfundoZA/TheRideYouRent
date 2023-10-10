@@ -34,7 +34,7 @@ namespace TheRideYouRent.Controllers
             }
 
             var driver = await _context.Driver
-                .FirstOrDefaultAsync(m => m.driverId == id);
+                .FirstOrDefaultAsync(m => m.DriverId == id);
             if (driver == null)
             {
                 return NotFound();
@@ -88,7 +88,7 @@ namespace TheRideYouRent.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("driverId,name,address,email,cellNumber")] Driver driver)
         {
-            if (id != driver.driverId)
+            if (id != driver.DriverId)
             {
                 return NotFound();
             }
@@ -102,7 +102,7 @@ namespace TheRideYouRent.Controllers
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!DriverExists(driver.driverId))
+                    if (!DriverExists(driver.DriverId))
                     {
                         return NotFound();
                     }
@@ -125,7 +125,7 @@ namespace TheRideYouRent.Controllers
             }
 
             var driver = await _context.Driver
-                .FirstOrDefaultAsync(m => m.driverId == id);
+                .FirstOrDefaultAsync(m => m.DriverId == id);
             if (driver == null)
             {
                 return NotFound();
@@ -147,7 +147,7 @@ namespace TheRideYouRent.Controllers
 
         private bool DriverExists(int id)
         {
-            return _context.Driver.Any(e => e.driverId == id);
+            return _context.Driver.Any(e => e.DriverId == id);
         }
     }
 }

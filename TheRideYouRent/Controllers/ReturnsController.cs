@@ -34,7 +34,7 @@ namespace TheRideYouRent.Controllers
             }
 
             var @return = await _context.Return
-                .FirstOrDefaultAsync(m => m.returnId == id);
+                .FirstOrDefaultAsync(m => m.ReturnId == id);
             if (@return == null)
             {
                 return NotFound();
@@ -88,7 +88,7 @@ namespace TheRideYouRent.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("returnId,rentalId,returnDate,fine")] Return @return)
         {
-            if (id != @return.returnId)
+            if (id != @return.ReturnId)
             {
                 return NotFound();
             }
@@ -102,7 +102,7 @@ namespace TheRideYouRent.Controllers
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!ReturnExists(@return.returnId))
+                    if (!ReturnExists(@return.ReturnId))
                     {
                         return NotFound();
                     }
@@ -125,7 +125,7 @@ namespace TheRideYouRent.Controllers
             }
 
             var @return = await _context.Return
-                .FirstOrDefaultAsync(m => m.returnId == id);
+                .FirstOrDefaultAsync(m => m.ReturnId == id);
             if (@return == null)
             {
                 return NotFound();
@@ -147,7 +147,7 @@ namespace TheRideYouRent.Controllers
 
         private bool ReturnExists(int id)
         {
-            return _context.Return.Any(e => e.returnId == id);
+            return _context.Return.Any(e => e.ReturnId == id);
         }
     }
 }
