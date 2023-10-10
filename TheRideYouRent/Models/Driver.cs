@@ -10,7 +10,7 @@ namespace TheRideYouRent.Models
     public class Driver
     {
         [Key]
-        Display(Name = "Driver Id")
+        [Display(Name = "Driver Id")]
         [Column("driver_id")]
         public int driverId { get; set; }
 
@@ -20,7 +20,7 @@ namespace TheRideYouRent.Models
 
         public string email { get; set; }
 
-        Display(Name = "Cell Number")
+        [Display(Name = "Cell Number")]
         [Column("cell_number")]
         public string cellNumber { get; set; }
     }

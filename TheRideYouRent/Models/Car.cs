@@ -10,7 +10,7 @@ namespace TheRideYouRent.Models
     public class Car
     {
         [Key]
-        Display(Name = "Car Id")
+        [Display(Name = "Car Id")]
         [Column("car_id")]
         public int carId { get; set; }
 
@@ -18,15 +18,15 @@ namespace TheRideYouRent.Models
 
         public string model { get; set; }
         
-        Display(Name = "Body Type")
+        [Display(Name = "Body Type")]
         [Column("body_type")]
         public string bodyType { get; set; }
 
-        Display(Name = "Kilometers Travelled")
+        [Display(Name = "Kilometers Travelled")]
         [Column("kilometers_travelled")]
         public int kilometersTravelled { get; set; }
 
-        Display(Name = "Service Kilometers")
+        [Display(Name = "Service Kilometers")]
         [Column("service_kilometers")]
         public int serviceKilometers { get; set; }
 
