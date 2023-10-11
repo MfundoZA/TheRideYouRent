@@ -1,4 +1,5 @@
-﻿@model IEnumerable<TheRideYouRent.Models.Rental>
+﻿@page
+@model IEnumerable<TheRideYouRent.Models.Rental>
 
 @{
     ViewData["Title"] = "Index";
@@ -7,28 +8,28 @@
 <h1>Index</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-page="Create">Create New</a>
 </p>
 <table class="table">
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.driverId)
+                @Html.DisplayNameFor(model => model.DriverId)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.inspectorId)
+                @Html.DisplayNameFor(model => model.InspectorId)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.carId)
+                @Html.DisplayNameFor(model => model.CarId)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.rentalFee)
+                @Html.DisplayNameFor(model => model.RentalFee)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.startDate)
+                @Html.DisplayNameFor(model => model.StartDate)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.endDate)
+                @Html.DisplayNameFor(model => model.EndDate)
             </th>
             <th></th>
         </tr>
@@ -37,27 +38,27 @@
 @foreach (var item in Model) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.driverId)
+                @Html.DisplayFor(modelItem => item.DriverId)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.inspectorId)
+                @Html.DisplayFor(modelItem => item.InspectorId)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.carId)
+                @Html.DisplayFor(modelItem => item.CarId)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.rentalFee)
+                @Html.DisplayFor(modelItem => item.RentalFee)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.startDate)
+                @Html.DisplayFor(modelItem => item.StartDate)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.endDate)
+                @Html.DisplayFor(modelItem => item.EndDate)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.rentalId">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.rentalId">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.rentalId">Delete</a>
+                <a asp-page="./Edit" asp-route-id="@item.RentalId">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.RentalId">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.RentalId">Delete</a>
             </td>
         </tr>
 }

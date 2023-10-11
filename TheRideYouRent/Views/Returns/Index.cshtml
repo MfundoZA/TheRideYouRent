@@ -1,4 +1,5 @@
-﻿@model IEnumerable<TheRideYouRent.Models.Return>
+﻿@page
+@model IEnumerable<TheRideYouRent.Models.Return>
 
 @{
     ViewData["Title"] = "Index";
@@ -7,19 +8,19 @@
 <h1>Index</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-page="Create">Create New</a>
 </p>
 <table class="table">
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.rentalId)
+                @Html.DisplayNameFor(model => model.RentalId)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.returnDate)
+                @Html.DisplayNameFor(model => model.ReturnDate)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.fine)
+                @Html.DisplayNameFor(model => model.Fine)
             </th>
             <th></th>
         </tr>
@@ -28,18 +29,18 @@
 @foreach (var item in Model) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.rentalId)
+                @Html.DisplayFor(modelItem => item.RentalId)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.returnDate)
+                @Html.DisplayFor(modelItem => item.ReturnDate)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.fine)
+                @Html.DisplayFor(modelItem => item.Fine)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.returnId">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.returnId">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.returnId">Delete</a>
+                <a asp-page="./Edit" asp-route-id="@item.ReturnId">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.ReturnId">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.ReturnId">Delete</a>
             </td>
         </tr>
 }

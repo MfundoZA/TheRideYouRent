@@ -1,4 +1,5 @@
-﻿@model TheRideYouRent.Models.Rental
+﻿@page
+@model TheRideYouRent.Models.Rental
 
 @{
     ViewData["Title"] = "Edit";
@@ -10,38 +11,38 @@
 <hr />
 <div class="row">
     <div class="col-md-4">
-        <form asp-action="Edit">
+        <form method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <input type="hidden" asp-for="rentalId" />
+            <input type="hidden" asp-for="RentalId" />
             <div class="form-group">
-                <label asp-for="driverId" class="control-label"></label>
-                <input asp-for="driverId" class="form-control" />
-                <span asp-validation-for="driverId" class="text-danger"></span>
+                <label asp-for="DriverId" class="control-label"></label>
+                <input asp-for="DriverId" class="form-control" />
+                <span asp-validation-for="DriverId" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="inspectorId" class="control-label"></label>
-                <input asp-for="inspectorId" class="form-control" />
-                <span asp-validation-for="inspectorId" class="text-danger"></span>
+                <label asp-for="InspectorId" class="control-label"></label>
+                <input asp-for="InspectorId" class="form-control" />
+                <span asp-validation-for="InspectorId" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="carId" class="control-label"></label>
-                <input asp-for="carId" class="form-control" />
-                <span asp-validation-for="carId" class="text-danger"></span>
+                <label asp-for="CarId" class="control-label"></label>
+                <input asp-for="CarId" class="form-control" />
+                <span asp-validation-for="CarId" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="rentalFee" class="control-label"></label>
-                <input asp-for="rentalFee" class="form-control" />
-                <span asp-validation-for="rentalFee" class="text-danger"></span>
+                <label asp-for="RentalFee" class="control-label"></label>
+                <input asp-for="RentalFee" class="form-control" />
+                <span asp-validation-for="RentalFee" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="startDate" class="control-label"></label>
-                <input asp-for="startDate" class="form-control" />
-                <span asp-validation-for="startDate" class="text-danger"></span>
+                <label asp-for="StartDate" class="control-label"></label>
+                <input asp-for="StartDate" class="form-control" />
+                <span asp-validation-for="StartDate" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="endDate" class="control-label"></label>
-                <input asp-for="endDate" class="form-control" />
-                <span asp-validation-for="endDate" class="text-danger"></span>
+                <label asp-for="EndDate" class="control-label"></label>
+                <input asp-for="EndDate" class="form-control" />
+                <span asp-validation-for="EndDate" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-primary" />
@@ -51,7 +52,7 @@
 </div>
 
 <div>
-    <a asp-action="Index">Back to List</a>
+    <a asp-page="./Index">Back to List</a>
 </div>
 
 @section Scripts {

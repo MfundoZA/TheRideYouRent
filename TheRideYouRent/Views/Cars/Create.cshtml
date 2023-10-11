@@ -1,4 +1,5 @@
-﻿@model TheRideYouRent.Models.Car
+﻿@page
+@model TheRideYouRent.Models.Car
 
 @{
     ViewData["Title"] = "Create";
@@ -10,37 +11,37 @@
 <hr />
 <div class="row">
     <div class="col-md-4">
-        <form asp-action="Create">
+        <form method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="make" class="control-label"></label>
-                <input asp-for="make" class="form-control" />
-                <span asp-validation-for="make" class="text-danger"></span>
+                <label asp-for="Make" class="control-label"></label>
+                <input asp-for="Make" class="form-control" />
+                <span asp-validation-for="Make" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="model" class="control-label"></label>
-                <input asp-for="model" class="form-control" />
-                <span asp-validation-for="model" class="text-danger"></span>
+                <label asp-for="Model" class="control-label"></label>
+                <input asp-for="Model" class="form-control" />
+                <span asp-validation-for="Model" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="bodyType" class="control-label"></label>
-                <input asp-for="bodyType" class="form-control" />
-                <span asp-validation-for="bodyType" class="text-danger"></span>
+                <label asp-for="BodyType" class="control-label"></label>
+                <input asp-for="BodyType" class="form-control" />
+                <span asp-validation-for="BodyType" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="kilometersTravelled" class="control-label"></label>
-                <input asp-for="kilometersTravelled" class="form-control" />
-                <span asp-validation-for="kilometersTravelled" class="text-danger"></span>
+                <label asp-for="KilometersTravelled" class="control-label"></label>
+                <input asp-for="KilometersTravelled" class="form-control" />
+                <span asp-validation-for="KilometersTravelled" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="serviceKilometers" class="control-label"></label>
-                <input asp-for="serviceKilometers" class="form-control" />
-                <span asp-validation-for="serviceKilometers" class="text-danger"></span>
+                <label asp-for="ServiceKilometers" class="control-label"></label>
+                <input asp-for="ServiceKilometers" class="form-control" />
+                <span asp-validation-for="ServiceKilometers" class="text-danger"></span>
             </div>
-            <div class="form-group form-check">
-                <label class="form-check-label">
-                    <input class="form-check-input" asp-for="available" /> @Html.DisplayNameFor(model => model.available)
-                </label>
+            <div class="form-group">
+                <label asp-for="Available" class="control-label"></label>
+                <input asp-for="Available" class="form-control" />
+                <span asp-validation-for="Available" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
@@ -50,7 +51,7 @@
 </div>
 
 <div>
-    <a asp-action="Index">Back to List</a>
+    <a asp-page="Index">Back to List</a>
 </div>
 
 @section Scripts {

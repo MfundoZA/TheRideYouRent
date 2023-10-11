@@ -1,4 +1,5 @@
-﻿@model IEnumerable<TheRideYouRent.Models.Car>
+﻿@page
+@model IEnumerable<TheRideYouRent.Models.Car>
 
 @{
     ViewData["Title"] = "Index";
@@ -7,28 +8,28 @@
 <h1>Index</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-page="Create">Create New</a>
 </p>
 <table class="table">
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.make)
+                @Html.DisplayNameFor(model => model.Make)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.model)
+                @Html.DisplayNameFor(model => model.Model)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.bodyType)
+                @Html.DisplayNameFor(model => model.BodyType)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.kilometersTravelled)
+                @Html.DisplayNameFor(model => model.KilometersTravelled)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.serviceKilometers)
+                @Html.DisplayNameFor(model => model.ServiceKilometers)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.available)
+                @Html.DisplayNameFor(model => model.Available)
             </th>
             <th></th>
         </tr>
@@ -37,27 +38,27 @@
 @foreach (var item in Model) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.make)
+                @Html.DisplayFor(modelItem => item.Make)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.model)
+                @Html.DisplayFor(modelItem => item.Model)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.bodyType)
+                @Html.DisplayFor(modelItem => item.BodyType)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.kilometersTravelled)
+                @Html.DisplayFor(modelItem => item.KilometersTravelled)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.serviceKilometers)
+                @Html.DisplayFor(modelItem => item.ServiceKilometers)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.available)
+                @Html.DisplayFor(modelItem => item.Available)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.carId">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.carId">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.carId">Delete</a>
+                <a asp-page="./Edit" asp-route-id="@item.CarId">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.CarId">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.CarId">Delete</a>
             </td>
         </tr>
 }

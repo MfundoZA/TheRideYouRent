@@ -1,5 +1,5 @@
-﻿@model TheRideYouRent.Models.Rental
-
+﻿@page
+@model TheRideYouRent.Models.Rental
 @{
     ViewData["Title"] = "Details";
 }
@@ -10,45 +10,45 @@
     <h4>Rental</h4>
     <hr />
     <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.driverId)
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.DriverId)
         </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.driverId)
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.DriverId)
         </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.inspectorId)
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.InspectorId)
         </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.inspectorId)
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.InspectorId)
         </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.carId)
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.CarId)
         </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.carId)
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.CarId)
         </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.rentalFee)
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RentalFee)
         </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.rentalFee)
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RentalFee)
         </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.startDate)
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.StartDate)
         </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.startDate)
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.StartDate)
         </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.endDate)
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.EndDate)
         </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.endDate)
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.EndDate)
         </dd>
     </dl>
 </div>
 <div>
-    <a asp-action="Edit" asp-route-id="@Model.rentalId">Edit</a> |
-    <a asp-action="Index">Back to List</a>
+    <a asp-page="./Edit" asp-route-id="@Model.RentalId">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
 </div>
