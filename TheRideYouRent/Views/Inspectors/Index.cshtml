@@ -38,9 +38,9 @@
                 @Html.DisplayFor(modelItem => item.CellNumber)
             </td>
             <td>
-                <a asp-page="./Edit" asp-route-id="@item.InspectorId">Edit</a> |
-                <a asp-page="./Details" asp-route-id="@item.InspectorId">Details</a> |
-                <a asp-page="./Delete" asp-route-id="@item.InspectorId">Delete</a>
+                <a asp-action="Edit" asp-route-id="@item.InspectorId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.InspectorId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.InspectorId">Delete</a>
             </td>
         </tr>
 }

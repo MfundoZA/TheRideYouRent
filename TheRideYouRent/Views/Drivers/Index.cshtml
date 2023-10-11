@@ -1,4 +1,4 @@
-﻿@page
+﻿
 @model IEnumerable<TheRideYouRent.Models.Driver>
 
 @{
@@ -8,7 +8,7 @@
 <h1>Index</h1>
 
 <p>
-    <a asp-page="Create">Create New</a>
+    <a asp-action="Create">Create New</a>
 </p>
 <table class="table">
     <thead>
@@ -44,9 +44,9 @@
                 @Html.DisplayFor(modelItem => item.CellNumber)
             </td>
             <td>
-                <a asp-page="./Edit" asp-route-id="@item.DriverId">Edit</a> |
-                <a asp-page="./Details" asp-route-id="@item.DriverId">Details</a> |
-                <a asp-page="./Delete" asp-route-id="@item.DriverId">Delete</a>
+                <a asp-action="Edit" asp-route-id="@item.DriverId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.DriverId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.DriverId">Delete</a>
             </td>
         </tr>
 }
